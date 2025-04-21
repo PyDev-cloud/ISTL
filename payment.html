@@ -51,7 +51,7 @@
                             <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
                             <!--<li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>-->
                             <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                            <li class="nav-item"><a href="payment.html" class="nav-link">Payment</a></li>
+                            <li class="nav-item"><a href="payment.html" class="nav-link active">Payment</a></li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Other Projects</a>
                                 <ul class="dropdown-menu">
@@ -69,41 +69,85 @@
 
     <section class="privacy-policy-area ptb-80">
         <div class="container">
-            <div class="p-5">
-                <h2>Return and Refund Policy</h2>
-                <p>At Doctor's Appointment, we aim to provide a smooth and reliable appointment scheduling service.
-                    However, we understand that unforeseen circumstances may arise. Below are our refund policies:</p>
-
-                <h4><strong>1. Appointment Cancellation & Refund</strong></h4>
-                <ul>
-                    <li>If a doctor is unavailable for the scheduled appointment, a full refund will be issued to the
-                        user.</li>
-                    <li>If a user cancels the appointment at least 24 hours before the scheduled time, they may be
-                        eligible for a refund (subject to doctor’s policy).</li>
-                    <li>Refunds will be processed through the original payment method within 7-10 business days.</li>
-                </ul>
-
-                <h4><strong>2. No-Show Policy</strong></h4>
-                <ul>
-                    <li>If a user fails to attend the appointment without prior cancellation, no refund will be issued.
-                    </li>
-                </ul>
-
-                <h4><strong>3. Payment Disputes</strong></h4>
-                <p>For any payment disputes or issues, users should contact Doctor's Appointment support at [Your
-                    support email] within 48 hours of the transaction.</p>
-
-                <h4><strong>4. Changes to this Policy</strong></h4>
-                <p>We reserve the right to modify or update this policy at any time. Users will be notified of any
-                    significant changes.</p>
-
-                <p style="text-align: justify;">
-                    For refund-related queries, please reach out to:
-                    <br />
-                    Email: <a href="mailto:info@istl.com.bd">info@istl.com.bd</a>
-                    <br />
-                    Phone: +(880)1711461876
-                </p>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-8">
+                    <div class="card overflow-hidden shadow-lg">
+                        <div class="card-body p-5">
+                            <h3 class="text-center mb-5" style="font-size: 1.2rem;">Continue with Payment</h3>
+                            <div>
+                                <div class="row mb-1">
+                                    <div class="col-6" style="font-weight: bold;">Payment amount</div>
+                                    <div class="col-6"><span class="mx-3">:</span>1000</div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-6" style="font-weight: bold;">Default charge</div>
+                                    <div class="col-6"><span class="mx-3">:</span>0</div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-6" style="font-weight: bold;">Additional charge</div>
+                                    <div class="col-6"><span class="mx-3">:</span>0</div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-6" style="font-weight: bold;">Default discount</div>
+                                    <div class="col-6"><span class="mx-3">:</span>0</div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-6" style="font-weight: bold;">Tax/VAT</div>
+                                    <div class="col-6"><span class="mx-3">:</span>0</div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-6" style="font-weight: bold;">Total</div>
+                                    <div class="col-6"><span class="mx-3">:</span>1000</div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-6" style="font-weight: bold;">Total amount to be paid</div>
+                                    <div class="col-6"><span class="mx-3">:</span>1000</div>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="row g-5 mt-0 pt-0">
+                                    <div class="col-sm-12 col-md-4 mt-0 pt-0">
+                                        <div class="card card-hover payment-card">
+                                            <label class="d-flex justify-content-center align-items-center">
+                                                <input type="radio" name="paymentMethod" value="1">
+                                                <img src="https://www.logo.wine/a/logo/BKash/BKash-bKash-Logo.wine.svg"
+                                                    alt="Bkash" class="img-fluid payment-logo">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 mt-0 pt-0">
+                                        <div class="card card-hover payment-card">
+                                            <label class="d-flex justify-content-center align-items-center">
+                                                <input type="radio" name="paymentMethod" value="2">
+                                                <img src="assets/img/ssl.png" alt="SSL Commerz" class="img-fluid payment-logo pl-2">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 mt-0 pt-0">
+                                        <div class="card card-hover payment-card">
+                                            <label class="d-flex justify-content-center align-items-center">
+                                                <input type="radio" name="paymentMethod" value="3">
+                                                <img src="https://www.logo.wine/a/logo/Nagad/Nagad-Logo.wine.svg"
+                                                    alt="Nagad" class="img-fluid payment-logo">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-check mt-4">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input"> I accept the
+                                        <a href="terms.html" class="text-primary">Terms and Conditions</a>,
+                                        <a href="privacy.html" class="text-primary">Privacy Policy</a>, and
+                                        <a href="return.html" class="text-primary">Return and Refund Policy</a>.
+                                    </label>
+                                </div>
+                                <div class="mt-4 d-grid d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-primary w-md-25">Confirm payment</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -160,7 +204,8 @@
                         <ul class="footer-contact-info">
                             <li><i data-feather="map-pin"></i> Level 3 & Level 5, House 1043 Avenue 9 Road 9 Mirpur
                                 DOHS, Dhaka - 1216 Bangladesh</li>
-                            <li><i data-feather="map-pin"></i> Ta-134/7/7, Boishakhi Sarani, Middle Badda, Badda, Dhaka-1212</li>
+                            <li><i data-feather="map-pin"></i> Ta-134/7/7, Boishakhi Sarani, Middle Badda, Badda,
+                                Dhaka-1212</li>
                             <li><i data-feather="mail"></i> Email: <a
                                     href="mailto:info@istl.com.bd">info@istl.com.bd</a></li>
                             <li><i data-feather="phone-call"></i> Phone: <a href="tel:+8801711461876">+(880) 1711 461
