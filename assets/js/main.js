@@ -411,3 +411,19 @@
         $('.preloader').fadeOut();
     });
 }(jQuery));
+
+
+
+
+$(document).ready(function(){
+  $('.slider').slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    dots: true,           
+    arrows: false,         
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+});

@@ -26,13 +26,21 @@ a:focus {
   text-decoration: none;
 }
 
+
+
+
+
+
+
+
 .d-table {
   width: 100%;
   height: 100%;
+  margin-top: 50px;
 }
 
 .d-table-cell {
-  vertical-align: middle;
+  /* vertical-align: middle;*/
 }
 
 p {
@@ -1462,13 +1470,49 @@ label {
   padding-right: 15px;
 }
 
-.single-box {
+.single-box-one {
   border: 1px dashed #cdf1d8;
   padding: 30px 20px;
   position: relative;
   z-index: 1;
   border-radius: 5px;
-  background: #fff;
+  background: #ebdb94;
+  -webkit-box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
+  box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.single-box-two {
+  border: 1px dashed #cdf1d8;
+  padding: 30px 20px;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  background: #83cff1ee;
+  -webkit-box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
+  box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.single-box-three {
+  border: 1px dashed #cdf1d8;
+  padding: 30px 20px;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  background: #659b6e;
+  -webkit-box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
+  box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.single-box-four {
+  border: 1px dashed #cdf1d8;
+  padding: 30px 20px;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  background: #fdefdd;
   -webkit-box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
   box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
   -webkit-transition: 0.5s;
@@ -1576,6 +1620,73 @@ label {
 .single-box:hover.bg-eb6b3d .icon {
   color: #eb6b3d;
 }
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  /* Stack the boxes vertically on smaller screens */
+  .single-box-one, .single-box-two, .single-box-three, .single-box-four {
+    width: 100%;  /* Make each box take full width on mobile */
+    margin-bottom: 20px;  /* Add spacing between boxes */
+    padding: 20px;  /* Reduce padding for mobile */
+  }
+
+  /* Icon size adjustment */
+  .single-box .icon {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 24px;  /* Adjust icon size */
+  }
+
+  /* Heading font size adjustment */
+  .single-box h3 {
+    font-size: 16px;  /* Smaller heading for mobile */
+    margin-top: 15px;  /* Adjust margin */
+  }
+
+  /* Paragraph font size adjustment */
+  .single-box p {
+    font-size: 14px;  /* Smaller font size for mobile */
+  }
+
+  /* Reduce the box shadow and other effects for smaller screens */
+  .single-box {
+    box-shadow: none;  /* Remove box-shadow to improve mobile performance */
+  }
+}
+
+/* For very small screens (under 480px) */
+@media screen and (max-width: 480px) {
+  .single-box-one, .single-box-two, .single-box-three, .single-box-four {
+    padding: 15px;  /* Further reduce padding */
+  }
+
+  /* Icon size further reduced */
+  .single-box .icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;  /* Smaller icon size */
+  }
+
+  /* Heading font size further reduced */
+  .single-box h3 {
+    font-size: 14px;  /* Further smaller heading */
+  }
+
+  /* Further adjust paragraph size */
+  .single-box p {
+    font-size: 12px;  /* Smaller text for small screens */
+  }
+}
+
+
+
+
 
 .about-content .section-title {
   text-align: left;
@@ -4190,56 +4301,21 @@ label {
   z-index: -1;
 }
 
-.partner-section {
-  text-align: center;
-  position: relative;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  background: 0 0;
-}
 
-.partner-section h5 {
-  font-size: 20px;
-  font-weight: 400;
-  color: #fff;
-  margin-bottom: 0;
-}
 
-.partner-section .partner-inner {
-  background: #fff;
-  padding-top: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 3px;
-  margin-top: 25px;
-}
 
-.partner-section .partner-inner a {
-  display: block;
-  margin-top: 25px;
-  position: relative;
-}
 
-.partner-section .partner-inner a img:last-child {
-  position: absolute;
-  top: 15px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
 
-.partner-section .partner-inner a:hover img:last-child {
-  opacity: 1;
-  top: 0;
-  visibility: visible;
-}
+
+
+
+
+
+
+
+
+
+
 
 .industries-serve-area {
   padding-bottom: 50px;
@@ -10725,3 +10801,236 @@ blockquote::after,
     border-left: none;
   }
 }
+
+
+
+
+
+
+.my-slider-container {
+   margin-top: 80px; /* Adjust based on your header height */
+  padding: 0;
+  max-height: 550px;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: relative;
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px 30px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.slide-overlay h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.arrow-btn {
+  background: transparent;
+  border: none;
+  color: #ffc107; 
+  font-size: 2.2rem;
+  margin-left: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.arrow-btn:hover {
+  transform: translateX(5px);
+}
+
+.slide-overlay ul li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.about-information {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-top: 20px;
+    gap: 40px;
+    margin-bottom: 180px;
+}
+
+.information, .Experience {
+    width: 48%;
+}
+
+.information h2 {
+    font-size: 32px;
+    color: #444;
+    text-align: center;
+}
+
+.information p {
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.Experience h3 {
+    color: #f7941d;
+    font-size: 28px;
+    margin: 0;
+    text-align: center;
+}
+
+.Experience p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #444;
+    text-align: center;
+}
+
+/* Mobile Responsive Styling */
+@media screen and (max-width: 768px) {
+    .about-information {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        gap: 20px; /* Reduce gap between elements */
+    }
+
+    .information, .Experience {
+        width: 100%; /* Make each section full-width */
+    }
+
+    .information h2 {
+        font-size: 28px; /* Adjust heading size for mobile */
+    }
+
+    .information p {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+
+    .Experience h3 {
+        font-size: 24px; /* Adjust experience heading size for mobile */
+    }
+
+    .Experience p {
+        font-size: 12px; /* Adjust paragraph font size for mobile */
+        margin-bottom: 20px; /* Reduce bottom margin for mobile */
+    }
+
+    /* Optional: Add some padding for mobile screens */
+    .about-information {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .information h2 {
+        font-size: 24px; /* Further reduce font size for very small screens */
+    }
+
+    .information p {
+        font-size: 13px; /* Further reduce font size for very small screens */
+    }
+
+    .Experience h3 {
+        font-size: 22px; /* Further adjust heading size */
+    }
+
+    .Experience p {
+        font-size: 11px; /* Adjust font size for very small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ #logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center horizontally (X-axis) */
+    align-items: center;     /* Center vertically (Y-axis) */
+    padding: 20px;
+    min-height: 200px; /* Ensure enough height to center on Y-axis */
+  }
+
+  .client-logo-area {
+    display: flex;
+    justify-content: center; /* Center section content horizontally */
+    align-items: center;     /* Center section content vertically */
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .section-title h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #444;
+  }
+
+  .section-title .bar {
+    width: 50px;
+    height: 3px;
+    background-color: #f7941d;
+    margin: 20px auto;
+  }
+
+  /* Responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .col-lg-2, .col-md-3, .col-4 {
+      flex: 1 1 30%;  /* Make it responsive by setting the width to 30% for mobile/tablets */
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .col-lg-2, .col-md-3, .col-4 {
+      flex: 1 1 45%;  /* Increase size on very small screens */
+      margin-bottom: 10px;
+    }
+  }

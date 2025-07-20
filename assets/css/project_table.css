@@ -1,0 +1,78 @@
+.custom-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  word-break: break-word;
+  background-color: white;
+  color: black;
+}
+
+
+
+.custom-table td.col-project{
+  text-align: start;
+}
+
+.custom-table .col-logo {
+  width: 10%;
+}
+
+.custom-table .col-project {
+  width: 75%!important;
+}
+
+.custom-table .col-download {
+  width: 15% !important;
+}
+
+.custom-table img {
+  width: 100px;
+  height: auto;
+}
+
+.btn-primary {
+  background-color: #00aaff;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .custom-table th,
+  .custom-table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .custom-table img {
+    width: 30px;
+  }
+
+  .btn-primary {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .custom-table .col-project {
+    width: 60%;
+  }
+
+  .custom-table .col-download {
+    width: 30%;
+  }
+}
