@@ -1,24 +1,22 @@
 .custom-table {
   width: 100%;
-  table-layout: fixed;
   border-collapse: collapse;
+  background-color: white;
+  color: black;
+  margin-bottom: 50px;
 }
 
 .custom-table th,
 .custom-table td {
-  border: 1px solid #000;
+  border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
   vertical-align: middle;
   word-break: break-word;
-  background-color: white;
-  color: black;
 }
 
-
-
-.custom-table td.col-project{
-  text-align: start;
+.custom-table td.col-project {
+  text-align: left;
 }
 
 .custom-table .col-logo {
@@ -26,15 +24,15 @@
 }
 
 .custom-table .col-project {
-  width: 75%!important;
+  width: 65% !important;
 }
 
 .custom-table .col-download {
-  width: 15% !important;
+  width: 25% !important;
 }
 
 .custom-table img {
-  width: 100px;
+  width: 80px;
   height: auto;
 }
 
@@ -51,7 +49,7 @@
   display: inline-block;
 }
 
-/* Responsive tweaks */
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .custom-table th,
   .custom-table td {
@@ -60,7 +58,7 @@
   }
 
   .custom-table img {
-    width: 30px;
+    width: 40px;
   }
 
   .btn-primary {
@@ -68,11 +66,15 @@
     font-size: 12px;
   }
 
+  .custom-table .col-logo {
+    width: 15%;
+  }
+
   .custom-table .col-project {
-    width: 60%;
+    width: 55% !important;
   }
 
   .custom-table .col-download {
-    width: 30%;
+    width: 30% !important;
   }
 }

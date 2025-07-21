@@ -415,15 +415,35 @@
 
 
 
-$(document).ready(function(){
-  $('.slider').slick({
-    autoplay: true,
-    autoplaySpeed: 4000,
-    dots: true,           
-    arrows: false,         
-    infinite: true,
-    speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+
+
+// JavaScript (using jQuery)
+$(document).ready(function () {
+    // Set active slide and dot
+    function changeSlide(slideIndex) {
+        // Remove active class from all slides and dots
+        $('.slide-content').removeClass('active');
+        $('.dot').removeClass('active');
+        
+        // Add active class to the selected slide and dot
+        $('.slide-content:nth-child(' + slideIndex + ')').addClass('active');
+        $('.dot:nth-child(' + slideIndex + ')').addClass('active');
+    }
+
+    // Initialize first slide as active
+    let currentSlide = 1;
+    changeSlide(currentSlide);
+
+    // Dots click event
+    $('.dot').on('click', function () {
+        var slideIndex = $(this).data('slide');
+        currentSlide = slideIndex; // Update the current slide index
+        changeSlide(currentSlide);
+    });
+
+    // Auto slide functionality (change slide every 5 seconds)
+    setInterval(function () {
+        currentSlide = currentSlide >= $('.slide-content').length ? 1 : currentSlide + 1;
+        changeSlide(currentSlide);
+    }, 5000); // Slide changes every 5 seconds
 });

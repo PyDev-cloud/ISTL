@@ -400,6 +400,51 @@ label {
   }
 }
 
+
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999;
+}
+
+/* Logo Image */
+.preloader .image {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+}
+
+/* Rotating Disk Loader */
+.preloader .loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #03a1c8;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: rotate 1.5s linear infinite;
+}
+
+/* Keyframe for rotating animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
 .preloader {
   position: fixed;
   left: 0;
@@ -1476,7 +1521,7 @@ label {
   position: relative;
   z-index: 1;
   border-radius: 5px;
-  background: #ebdb94;
+  background: #FFFBEB;
   -webkit-box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
   box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
   -webkit-transition: 0.5s;
@@ -1488,7 +1533,7 @@ label {
   position: relative;
   z-index: 1;
   border-radius: 5px;
-  background: #83cff1ee;
+  background: #EFF6FF;
   -webkit-box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
   box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
   -webkit-transition: 0.5s;
@@ -1500,7 +1545,7 @@ label {
   position: relative;
   z-index: 1;
   border-radius: 5px;
-  background: #659b6e;
+  background: #FDF2F8;
   -webkit-box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
   box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
   -webkit-transition: 0.5s;
@@ -1512,7 +1557,7 @@ label {
   position: relative;
   z-index: 1;
   border-radius: 5px;
-  background: #fdefdd;
+  background: #ECFDF5;
   -webkit-box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
   box-shadow: 0 0 10px rgba(72, 69, 224, 0.1);
   -webkit-transition: 0.5s;
@@ -10807,58 +10852,6 @@ blockquote::after,
 
 
 
-.my-slider-container {
-   margin-top: 80px; /* Adjust based on your header height */
-  padding: 0;
-  max-height: 550px;
-  overflow: hidden;
-}
-
-.slider img {
-  width: 100%;
-  height: 550px;
-  object-fit: cover;
-}
-
-.slide-content {
-  position: relative;
-}
-
-.slide-overlay {
-  position: absolute;
-  top: 25%;
-  left: 8%;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 25px 30px;
-  border-radius: 10px;
-  max-width: 400px;
-}
-
-.slide-overlay h2 {
-  font-size: 26px;
-  margin-bottom: 15px;
-}
-
-.arrow-btn {
-  background: transparent;
-  border: none;
-  color: #ffc107; 
-  font-size: 2.2rem;
-  margin-left: 50px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.arrow-btn:hover {
-  transform: translateX(5px);
-}
-
-.slide-overlay ul li {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-
 
 
 
@@ -11034,3 +11027,139 @@ blockquote::after,
       margin-bottom: 10px;
     }
   }
+
+
+
+
+
+
+
+
+
+  /* Slider Container */
+.my-slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+/* Slide Container */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Slide */
+.slide-content {
+    display: none; /* Hide all slides by default */
+    position: relative;
+    width: 100%;
+    height: 650px; /* Set a fixed height for all slides */
+}
+
+/* Make the active slide visible */
+.slide-content.active {
+    display: block;
+}
+
+/* Image Styling for Slides */
+.slide-content img {
+    width: 100%;
+    height: 100%; /* Ensures image covers the entire height of the slide */
+    object-fit: cover; /* Ensures the image fills the container without distorting */
+}
+
+/* Overlay Text */
+.slide-overlay {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: start;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Heading and Subheading */
+.slide-overlay h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.slide-overlay ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slide-overlay li {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Arrow button styling */
+.arrow-btn {
+    text-decoration: none;
+    color: #ffcc00;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+/* Dot Navigation Styling */
+.dots-navigation {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dots-navigation .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Active Dot Styling */
+.dots-navigation .dot.active {
+    background-color: #ffcc00; /* Active dot color */
+}
+
+/* Hover Effect for Dots */
+.dots-navigation .dot:hover {
+    background-color: #ff9900;
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+    .slide-overlay h2 {
+        font-size: 24px;
+    }
+
+    .slide-overlay ul li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-overlay h2 {
+        font-size: 20px;
+    }
+
+    .slide-overlay ul li {
+        font-size: 14px;
+    }
+
+    .dots-navigation .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
