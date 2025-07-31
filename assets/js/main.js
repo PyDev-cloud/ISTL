@@ -445,5 +445,5 @@ $(document).ready(function () {
     setInterval(function () {
         currentSlide = currentSlide >= $('.slide-content').length ? 1 : currentSlide + 1;
         changeSlide(currentSlide);
-    }, 5000); // Slide changes every 5 seconds
+    }, 8000); // Slide changes every 5 seconds
 });
