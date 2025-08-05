@@ -416,34 +416,62 @@
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector('.slider');
+    const dots = document.querySelectorAll('.dot');
+    const slides = document.querySelectorAll('.slide-content');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    let autoSlideInterval;
 
-// JavaScript (using jQuery)
-$(document).ready(function () {
-    // Set active slide and dot
-    function changeSlide(slideIndex) {
-        // Remove active class from all slides and dots
-        $('.slide-content').removeClass('active');
-        $('.dot').removeClass('active');
-        
-        // Add active class to the selected slide and dot
-        $('.slide-content:nth-child(' + slideIndex + ')').addClass('active');
-        $('.dot:nth-child(' + slideIndex + ')').addClass('active');
-    }
+    // Clone first slide and append to end for seamless loop
+    const firstSlideClone = slides[0].cloneNode(true);
+    slider.appendChild(firstSlideClone);
 
-    // Initialize first slide as active
-    let currentSlide = 1;
-    changeSlide(currentSlide);
+    const goToSlide = (index, transition = true) => {
+        if (!transition) {
+            slider.style.transition = 'none';
+        } else {
+            slider.style.transition = 'transform 1s ease-in-out';
+        }
+        slider.style.transform = `translateX(-${index * 100}vw)`;
 
-    // Dots click event
-    $('.dot').on('click', function () {
-        var slideIndex = $(this).data('slide');
-        currentSlide = slideIndex; // Update the current slide index
-        changeSlide(currentSlide);
+        // Update dots
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (index === totalSlides) {
+            dots[0].classList.add('active');
+        } else {
+            dots[index].classList.add('active');
+        }
+
+        currentIndex = index;
+    };
+
+    const startAutoSlide = () => {
+        autoSlideInterval = setInterval(() => {
+            currentIndex++;
+            goToSlide(currentIndex);
+
+            if (currentIndex === totalSlides) {
+                // At clone slide, reset to first real slide instantly
+                setTimeout(() => {
+                    goToSlide(0, false); // jump to first real slide with no animation
+                    currentIndex = 0;
+                }, 1000); // match transition duration
+            }
+        }, 5000); // every 5 seconds
+    };
+
+    // Dot click
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            clearInterval(autoSlideInterval);
+            goToSlide(index);
+            currentIndex = index;
+            startAutoSlide();
+        });
     });
 
-    // Auto slide functionality (change slide every 5 seconds)
-    setInterval(function () {
-        currentSlide = currentSlide >= $('.slide-content').length ? 1 : currentSlide + 1;
-        changeSlide(currentSlide);
-    }, 8000); // Slide changes every 5 seconds
+    goToSlide(0); // initialize to first slide
+    startAutoSlide();
 });
