@@ -459,7 +459,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     currentIndex = 0;
                 }, 1000); // match transition duration
             }
-        }, 5000); // every 5 seconds
+        }, 6000); // every 5 seconds
     };
 
     // Dot click
